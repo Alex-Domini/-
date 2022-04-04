@@ -3,8 +3,24 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
 
+  &__adress {
+    margin-right: 48px;
+  }
 
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+}
 
 
 @import 'media';
