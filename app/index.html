@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ФрешОК</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -13,8 +13,8 @@
       <div class="container">
         <div class="header__info">
           <div class="header__contacts">
-            <a class="header__adress" href="#">АДРЕС И ВРЕМЯ ДОСТАВКИ</a>
-            <a class="header__call" href="#">ГОРЯЧАЯ ЛИНИЯ 24/7</a>
+            <a class="header__address" href="#">АДРЕС И ВРЕМЯ ДОСТАВКИ</a>
+            <a class="header__tell" href="#">ГОРЯЧАЯ ЛИНИЯ 24/7</a>
           </div>
 
           <ul class="header__list">
@@ -34,13 +34,250 @@
               <a class="header__link" href="#">
                 НОВОСТИ
               </a>
-            </li>
-            
+            </li> 
           </ul>
         </div>
       </div>
     </div>
+
+    <div class="header__nav">
+      <div class="container">
+        <div class="header__nav-inner">
+          <div class="header__brand brand">
+            <a class="header__logo logo" href="#">
+              <img class="logo__img" src="images/icons/logo.png" width="54" height="60" alt="">
+            </a>
+
+            <div class="header__brand-title">
+              <h1 class="header__title title">
+                ФРЕШОК
+              </h1>
+              <p>ОНЛАЙН-МАРКЕТ</p>
+            </div>
+          </div>
+
+            <button class="header__catalog">Каталог продуктов</button>
+        
+            <form class="header__form">
+              <input class="header__field" type="text" placeholder="Найти в магазине ..." required>
+              <button class="header__search" type="submit">Поиск</button>
+            </form>
+          
+          <div class="user-nav">
+            <ul class="user-nav__list">
+              <li class="user-nav__item">
+                <a class="user-nav__link" href="#">
+                  <img class="user-nav__img" src="images/icons/icon-user.svg" width="24" height="32" alt="">
+                </a>
+              </li>
+              
+              <li class="user-nav__item">
+                <a class="user-nav__link" href="#">
+                  <img class="user-nav__img" src="images/icons/icon-heart.svg" width="32" height="28" alt="">
+                  <span class="user-nav__num">12</span>
+                </a>
+              </li>
+  
+              <li class="user-nav__item">
+                <a class="user-nav__link" href="#">
+                  <img class="user-nav__img" src="images/icons/icon-cart.svg" width="32" height="30" alt="">
+                  <span class="user-nav__num">12</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
+
+  <main class="main">
+    <section class="slider">   
+      <div class="slider__wrapper" style="background-image: url('images/slider-img/slider-bg1.jpg');">
+        <div class="container">
+            <div class="slider__item">
+              <div class="slider__content">
+                <h2 class="slider__title">
+                  СВЕЖАЧОК ВАМ В ХАТУ 
+                  <span>СКИДКА -50%</span>
+                </h2>
+
+                <p class="slider__text">
+                  Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+                </p>
+
+                <button class="slider-btn btn" type="button">Купить сейчас</button>
+              </div>
+            </div>
+        </div>     
+      </div>
+
+      <div class="slider__wrapper" style="background-image: url('images/slider-img/slider-bg2.jpg');">
+        <div class="container">
+          <div class="slider__item">
+            <div class="slider__content">
+              <h2 class="slider__title">
+                НАКРУТИ СЕБЕ ТОМАТОВ 
+                <span>АКЦИЯ: 3 кг по цене 1</span>
+              </h2>
+
+              <p class="slider__text">
+                Только с 12 по 15 июля скидка на домашние помидорчики
+              </p>
+
+              <button class="slider-btn btn" type="button">Купить сейчас</button>
+            </div>
+          </div>
+        </div>     
+      </div>
+
+      <div class="slider__wrapper" style="background-image: url('images/slider-img/slider-bg3.jpg');">
+        <div class="container">
+          <div class="slider__item">
+            <div class="slider__content">
+              <h2 class="slider__title">
+                Пусть остальные позеленеют от зависти 
+                <span>Распродажа зелени</span>
+              </h2>
+
+              <button class="slider-btn btn" type="button">Купить сейчас</button>
+              
+            </div>
+          </div>
+        </div>     
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer__brand brand">
+          <a class="footer__logo logo" href="#">
+            <img class="logo__img" src="images/icons/logo.png" width="54" height="60" alt="">
+          </a>
+              
+          <div class="footer__brand-title">
+            <h1 class="footer__title title">
+              ФРЕШОК
+            </h1>
+            <p>ОНЛАЙН-МАРКЕТ</p>
+          </div>
+        </div>
+
+        <div class="footer__inner">
+          <div class="footer__form">
+            <p class="footer__text">Следите за нашими акциями</p>
+
+            <form class=form">
+              <input class="footer__field" type="text" placeholder="email@email.com" required>
+              <button class="footer__subscribe" type="submit">ПОДПИСАТЬСЯ</button>
+            </form>
+          </div>
+
+          <div class="footer__info">
+            <div class="footer__info-items">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__link" href="#"> О нас</a>
+                </li>
+
+                <li class="footer__item">
+                  <a class="footer__link" href="#">Контакты</a>
+                </li>
+                
+                <li class="footer__item">
+                  <a class="footer__link" href="#">Публичная оферта</a>
+                </li>
+              </ul>  
+            </div>
+
+            <div class="footer__info-items">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__link" href="#">Оплата и доставка</a>
+                </li>
+
+                <li class="footer__item">
+                  <a class="footer__link" href="#">Вакансии</a>
+                </li>
+                
+                <li class="footer__item">
+                  <a class="footer__link" href="#">Акции</a>
+                </li>
+              </ul>  
+            </div>
+
+            <div class="footer__info-items">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__link" href="#">Отзывы</a>
+                </li>
+
+                <li class="footer__item">
+                  <a class="footer__link" href="#">Новости</a>
+                </li>
+              </ul>  
+            </div>
+          </div>
+
+          <addres class="footer__contacts">
+            <ul class="footer__contacts-list">
+              <li class="footer__contacts-item">
+                <a class="footer__phone-link" href="tel:+7907288365">Горячая линия+7 907 288 365</a>
+              </li>
+
+              <li class="footer__contacts-item">
+                <a class="footer__address-link" href="#">Санкт-Петербург, ул. Ленина, 1</a>
+              </li>
+            </ul>    
+
+            <ul class="footer__social-list">
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#" style="background-image: url('images/icons/facebook.svg'); width: 31px; height: 32px;">
+                  <span class="sr-only">перейти в </span>
+                </a>
+              </li>
+
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#" style="background-image: url('images/icons/youtube.svg'); width: 31px; height: 32px;">
+                  <span class="sr-only">перейти в </span>
+                </a>
+              </li>
+
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#" style="background-image: url('images/icons/telegram.svg'); width: 31px; height: 26px;">
+                  <span class="sr-only">перейти в </span>
+                </a>
+              </li>
+
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#" style="background-image: url('images/icons/instagram.svg'); width: 31px; height: 32px;">
+                  <span class="sr-only">перейти в </span>
+                </a>
+              </li>
+            </ul>  
+          </addres>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom__wrapper">
+          <p class="footer-bottom__copy">
+            © 2021 ФРЕШОК
+          </p>
+
+          <div class="footer-bottom__accept">
+            <img class="footer-bottom__accept-img" src="images/icons/visa-icon.svg" width="93" height="29" alt="мы принимаем карты виза">
+            <img class="footer-bottom__accept-img" src="images/icons/mastercard-icon.svg" width="49" height="29" alt="мы принимаем карты мастеркарт">
+          </div>
+        </div>
+      </div>  
+    </div>
+    
+  </footer>
 
 
   <script src="js/main.min.js"></script>

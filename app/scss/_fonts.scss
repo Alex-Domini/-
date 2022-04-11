@@ -67,3 +67,13 @@
   font-display: swap;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Ruda-Black';
+  src: local('Ruda-Black'),
+       url('../fonts/Ruda-Black.woff2') format('woff2'),
+       url('../fonts/Ruda-Black.woff') format('woff');
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
