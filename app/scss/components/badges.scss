@@ -1,0 +1,37 @@
+.badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 700;
+    padding: 3px 6px;
+    border-radius: 6px;
+    letter-spacing: 0.03em;
+    color: $white;
+    text-transform: uppercase;
+    display: none;
+
+    &--new {
+      background-color: $green-900;
+    }
+
+    &--sale {
+      background-color: $red-900;
+    }
+
+    &--hit {
+      background-color: $yellow-900;
+    }
+
+    &--on {
+      display: block;
+    }
+  }
+}

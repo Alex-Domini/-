@@ -1,7 +1,9 @@
-$(function(){
-  $('.slider').slick({
+$(function () {
+  $(".top-slider__inner").slick({
     dots: false,
-    prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/arrow-left.svg" alt="arrow-left"></button>',
-    nextArrow: '<button type="button" class="slick-next"><img src="images/icons/arrow-right.svg" alt="arrow-right"></button>',
+    prevArrow: $(".top-slider__btn-prev"),
+    nextArrow: $(".top-slider__btn-next"),
   });
+
+  var mixer = mixitup(".top-products__cards");
 });

@@ -1,0 +1,57 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "OpenSans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.logo {
+  flex: 0 0 200px;
+}
+
+.logo__img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  margin: 0 auto;
+  font-size: 32px;
+  letter-spacing: 0.03em;
+  font-family: "Ruda", sans-serif;
+  font-weight: 600;
+  color: $dark-900;
+  text-transform: uppercase;
+  text-align: center;
+}

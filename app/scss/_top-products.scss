@@ -1,0 +1,19 @@
+.top-products {
+  padding: 74px 0;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 49px;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
+}

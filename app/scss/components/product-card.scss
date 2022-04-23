@@ -1,0 +1,186 @@
+.product-card {
+  display: block;
+  position: relative;
+  padding: 58px 0 18px;
+  max-width: 300px;
+  height: 409px;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  border-radius: 6px;
+  transition: border 0.3s;
+
+  &:hover {
+    border: 1px solid $green-900;
+  }
+
+  &__badges {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
+
+  &__favorites {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: 12px;
+    right: 5px;
+    border-radius: 3px;
+    outline: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+
+    &::before {
+      display: inline-block;
+      content: "";
+      mask-image: url("../../images/sprite.svg#heart-icon");
+      background-color: $silver-600;
+      mask-size: cover;
+      mask-repeat: no-repeat;
+      mask-position: center center;
+      width: 32px;
+      height: 28px;
+      transition: background-color 0.3s;
+    }
+
+    &:focus::before {
+      box-shadow: 0 0 0 3px $green-200;
+    }
+
+    &:hover::before {
+      background-color: $yellow-900;
+    }
+
+    &:active::before {
+      box-shadow: none;
+      background-color: rgba(255, 184, 0, 0.5);
+    }
+  }
+
+  &__link-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: background-color 0.3s;
+    }
+
+    &:hover::before {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.1);
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    &:hover::after {
+      background-image: url("../../images/icons/search-green-icon.svg");
+      width: 20px;
+      height: 20px;
+      z-index: 2;
+    }
+  }
+
+  &__img {
+    max-width: 298px;
+    object-fit: contain;
+  }
+
+  &__info {
+    padding: 0 18px;
+    letter-spacing: 0.03em;
+    margin-top: 18px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    color: $dark-900;
+    letter-spacing: 0.03em;
+    @include line-clamp(3);
+    height: 65px;
+  }
+
+  &__cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: $green-900;
+    border-radius: 3px;
+    outline: transparent;
+    transition: background-color 0.3s;
+    &:focus {
+      box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.5);
+    }
+
+    &:hover {
+      background-color: #4d800c;
+    }
+
+    &:active {
+      box-shadow: inset 0 10px 4px rgba(0, 0, 0, 0.1);
+      color: rgba(99, 166, 14, 0.5);
+    }
+
+    &::before {
+      content: "";
+      width: 16px;
+      height: 15px;
+      mask-image: url("../../images/sprite.svg#cart-icon");
+      background-color: $white;
+      mask-size: cover;
+      mask-repeat: no-repeat;
+      mask-position: center center;
+    }
+
+    &:active::before {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+.prices {
+  color: $dark-500;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  align-self: flex-end;
+  text-align: start;
+
+  &__item {
+    &--old {
+      display: block;
+      color: $silver-600;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        border-bottom: 1px solid $silver-600;
+        width: 100%;
+        height: 50%;
+        transform: rotate(-12deg);
+      }
+    }
+  }
+}
