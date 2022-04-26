@@ -1,0 +1,116 @@
+.news {
+  padding-bottom: 72px;
+  &__top-news {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    display: contents;
+  }
+
+  &__top-link {
+    font-weight: 700;
+    line-height: 1.3;
+    color: $green-900;
+    text-transform: uppercase;
+    outline: transparent;
+    transition: color 0.3s, box-shadow 0.3s;
+    margin-right: 10px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      left: 0;
+      bottom: -5px;
+      background-color: $green-900;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      color: #4d800c;
+      box-shadow: none;
+      &::after {
+        background-color: #4d800c;
+      }
+    }
+
+    &:active {
+      box-shadow: none;
+      color: $green-900;
+      &::after {
+        background-color: $green-200;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 410px;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+  }
+
+  &__link-box {
+    position: relative;
+  }
+
+  &__date {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 76px;
+    background-color: $white;
+    top: 0;
+    left: 20px;
+    border-radius: 0 0 4px 4px;
+    text-align: center;
+    z-index: 1;
+  }
+
+  &__num {
+    font-size: 10px;
+    font-weight: 700;
+    color: $dark-900;
+    letter-spacing: 0.1em;
+    line-height: 3;
+    text-transform: uppercase;
+    span {
+      display: block;
+      font-family: "Ruda";
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 0.7;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 1.5;
+    color: $dark-900;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $green-900;
+    }
+  }
+
+  &__text {
+    padding: 18px;
+  }
+}

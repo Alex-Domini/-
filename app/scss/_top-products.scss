@@ -1,5 +1,8 @@
 .top-products {
   padding: 74px 0;
+  #container {
+    display: none;
+  }
 
   &__title {
     margin-bottom: 30px;

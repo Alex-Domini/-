@@ -1,0 +1,179 @@
+.sales-products {
+  padding: 72px 0;
+  background-color: $silver-100;
+
+  .filters__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 44px;
+  }
+}
+
+.sales-product {
+  display: flex;
+  position: relative;
+  padding: 12px;
+  max-width: 300px;
+  height: 100%;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  border-radius: 6px;
+  background-color: $white;
+  transition: border 0.3s;
+
+  &:hover {
+    border: 1px solid $green-900;
+  }
+
+  &__badges {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
+
+  &__link-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: background-color 0.3s;
+    }
+
+    &:hover::before {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.1);
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    &:hover::after {
+      background-image: url("../../images/icons/search-green-icon.svg");
+      width: 20px;
+      height: 20px;
+      z-index: 2;
+    }
+  }
+
+  &__img {
+    max-width: 100px;
+    width: 100%;
+    object-fit: contain;
+    margin-right: 10px;
+  }
+
+  &__info {
+    max-width: 164px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    letter-spacing: 0.03em;
+  }
+
+  &__link {
+    color: $dark-900;
+    letter-spacing: 0.03em;
+    @include line-clamp(3);
+  }
+
+  &__num {
+    font-weight: 700;
+    color: $dark-500;
+  }
+
+  &__star {
+    width: 16px;
+    height: 15px;
+    border-radius: 3px;
+    outline: transparent;
+    &::before {
+      display: block;
+      content: "";
+      right: -20px;
+      bottom: 0;
+      width: 16px;
+      height: 15px;
+      mask-image: url("../images/sprite.svg#star-icon");
+      background-color: $silver-600;
+      mask-size: cover;
+      mask-repeat: no-repeat;
+      mask-position: center center;
+      transition: background-color 0.3s;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.5);
+    }
+
+    &:hover::before {
+      background-color: #ffb800;
+    }
+
+    &:active::before {
+      background-color: rgba(238, 215, 155, 0.5);
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.stock {
+  left: 118px;
+  top: 75px;
+}
+
+.sales-prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &__item {
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    color: $dark-500;
+    margin-right: 12px;
+    span {
+      font-size: 12px;
+    }
+
+    &--old {
+      position: relative;
+      display: block;
+      font-size: 12px;
+      color: $silver-600;
+      margin-right: 12px;
+      &::before {
+        position: absolute;
+        content: "";
+        border-bottom: 1px solid $silver-600;
+        width: 100%;
+        height: 50%;
+        transform: rotate(-12deg);
+      }
+    }
+  }
+}

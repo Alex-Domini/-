@@ -6,4 +6,5 @@ $(function () {
   });
 
   var mixer = mixitup(".top-products__cards");
+  var mixer = mixitup(".sales-products__cards");
 });

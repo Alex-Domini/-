@@ -1,4 +1,5 @@
-.badges {
+.badges,
+.stock {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -28,6 +29,18 @@
 
     &--hit {
       background-color: $yellow-900;
+    }
+
+    &--stock {
+      color: $green-900;
+    }
+
+    &--sold {
+      color: $red-900;
+    }
+
+    &--end {
+      color: $silver-600;
     }
 
     &--on {
