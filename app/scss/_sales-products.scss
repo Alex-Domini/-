@@ -96,6 +96,10 @@
     @include line-clamp(3);
   }
 
+  &__numb {
+    display: flex;
+  }
+
   &__num {
     font-weight: 700;
     color: $dark-500;
