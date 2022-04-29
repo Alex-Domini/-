@@ -3,10 +3,11 @@
   position: relative;
   padding: 58px 0 18px;
   max-width: 300px;
-  height: 409px;
+  height: 100%;
   border: 1px solid rgba(17, 17, 17, 0.2);
   border-radius: 6px;
   transition: border 0.3s;
+  z-index: 1;
 
   &:hover {
     border: 1px solid $green-900;
@@ -69,6 +70,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: transparent;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(99, 166, 14, 0.5);
+    }
 
     &::before,
     &::after {
@@ -131,6 +137,7 @@
     border-radius: 3px;
     outline: transparent;
     transition: background-color 0.3s;
+
     &:focus {
       box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.5);
     }

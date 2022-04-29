@@ -7,16 +7,18 @@
   }
 
   &__item {
+    display: flex;
+    align-items: center;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
     overflow: hidden;
     &:nth-child(1) {
       .features__link {
         max-width: 385px;
         width: 100%;
+        color: $white;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
       }
     }
   }
@@ -33,7 +35,6 @@
 
     &:hover {
       color: $white;
-      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
     }
   }
 

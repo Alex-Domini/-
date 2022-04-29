@@ -104,21 +104,32 @@
     color: $green-900;
     letter-spacing: 0.03em;
     position: relative;
+    padding-left: 60px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $green-200;
+    }
 
     &::before {
-      display: inline-block;
       content: "";
-      background-image: url("../images/icons/nav-icon.svg");
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      mask-image: url("../images/sprite.svg#nav-icon");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      background-color: $green-900;
       width: 25px;
       height: 17px;
-      vertical-align: top;
-      margin-right: 18px;
     }
 
     &::after {
-      position: absolute;
-      display: inline-block;
       content: "";
+      position: absolute;
+      right: 18px;
+      top: 20px;
       mask-image: url("../images/sprite.svg#arrow-down-icon");
       mask-position: center;
       mask-repeat: no-repeat;
@@ -126,8 +137,6 @@
       background-color: $green-900;
       width: 7px;
       height: 7px;
-      right: 18px;
-      top: 20px;
     }
   }
 

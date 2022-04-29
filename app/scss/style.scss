@@ -11,6 +11,7 @@
     -webkit-box-orient: vertical;
   }
 }
+
 @import "common/vars";
 @import "common/fonts";
 @import "common/reset";
@@ -34,3 +35,7 @@
 @import "news";
 
 @import "footer";
+#Container2 .mix,
+#Container1 .mix {
+  display: none;
+}
