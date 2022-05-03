@@ -1,29 +1,19 @@
-@mixin line-clamp($lines: 1) {
-  @if $lines <=1 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  } @else {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: $lines;
-    -webkit-box-orient: vertical;
-  }
-}
-
+// Подключение общих стилей
 @import "common/vars";
 @import "common/fonts";
 @import "common/reset";
 @import "common/libs";
 @import "common/global";
 
+// Подключение компонентов
 @import "components/buttons.scss";
 @import "components/filters.scss";
 @import "components/product-card.scss";
 @import "components/badges.scss";
+@import "components/product-status.scss";
 @import "components/social.scss";
 
+// Подключение секций
 @import "header";
 
 @import "top-slider";
@@ -31,11 +21,7 @@
 @import "top-products";
 @import "features";
 @import "sales-products";
-@import "brands";
+@import "brands-slider";
 @import "news";
 
 @import "footer";
-#Container2 .mix,
-#Container1 .mix {
-  display: none;
-}

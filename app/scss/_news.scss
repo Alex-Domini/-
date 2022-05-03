@@ -1,6 +1,7 @@
 .news {
   padding-bottom: 72px;
-  &__top-news {
+
+  &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,13 +22,14 @@
     margin-right: 10px;
     position: relative;
     padding-bottom: 5px;
+
     &::after {
-      position: absolute;
       content: "";
-      width: 100%;
-      height: 2px;
+      position: absolute;
       left: 0;
       bottom: 0;
+      width: 100%;
+      height: 2px;
       background-color: $green-900;
     }
 
@@ -39,6 +41,7 @@
     &:hover {
       color: #4d800c;
       box-shadow: none;
+
       &::after {
         background-color: #4d800c;
       }
@@ -47,6 +50,7 @@
     &:active {
       box-shadow: none;
       color: $green-900;
+
       &::after {
         background-color: $green-200;
       }
@@ -62,56 +66,83 @@
     max-width: 410px;
     width: 100%;
     border-radius: 6px;
-    z-index: 2;
-    outline: transparent;
-  }
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+    margin-right: 15px;
 
-  &__link-box {
-    position: relative;
-  }
-
-  &__date {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 65px;
-    height: 76px;
-    background-color: $white;
-    top: 0;
-    left: 20px;
-    border-radius: 0 0 4px 4px;
-    text-align: center;
-    z-index: 1;
-  }
-
-  &__num {
-    font-size: 10px;
-    font-weight: 700;
-    color: $dark-900;
-    letter-spacing: 0.1em;
-    line-height: 3;
-    text-transform: uppercase;
-    span {
-      display: block;
-      font-family: "Ruda";
-      font-weight: 600;
-      font-size: 30px;
-      line-height: 0.7;
+    &:last-child {
+      margin-right: 0;
     }
   }
 
   &__link {
+    position: relative;
     font-size: 16px;
     line-height: 1.5;
     color: $dark-900;
     transition: color 0.3s;
+
     &:hover {
       color: $green-900;
     }
   }
 
+  &__date {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 76px;
+    background-color: $white;
+    border-radius: 0 0 4px 4px;
+    text-align: center;
+    z-index: 1;
+    text-transform: uppercase;
+  }
+
+  &__month {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    color: $dark-900;
+    letter-spacing: 0.1em;
+    line-height: 2;
+    text-transform: uppercase;
+  }
+
+  &__number {
+    display: block;
+    font-family: "Ruda";
+    font-size: 30px;
+    line-height: 1;
+  }
+
+  &__image-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 58.54%;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   &__text {
-    padding: 18px;
+    padding: 18px 18px 0;
+    margin-bottom: 18px;
+    @include line-clamp(5);
   }
 }

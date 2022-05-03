@@ -1,18 +1,15 @@
 .top-products {
-  padding: 74px 0;
-  #container {
-    display: none;
-  }
+  padding: 72px 0;
 
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 
   &__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
-    margin-bottom: 49px;
+    gap: 30px;
+    margin-bottom: 41px;
   }
 
   &__btn {

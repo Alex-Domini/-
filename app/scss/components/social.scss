@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     &:not(:last-child) {
       margin-right: 12px;
     }
@@ -19,6 +20,7 @@
     background-size: contain;
     transition: opacity 0.3s;
     outline: transparent;
+
     &__before {
       filter: invert(3%) sepia(95%) saturate(0%) hue-rotate(200deg)
         brightness(103%) contrast(101%);

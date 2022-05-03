@@ -13,7 +13,7 @@
 
 <body>
   <header class="header">
-    <div class="header__nav">
+    <nav class="header__nav">
       <div class="header__top header-top">
         <div class="header-top__container container">
           <ul class="header-top__list">
@@ -73,20 +73,22 @@
             <li class="user-nav__item">
               <button class="user-nav__btn user-nav__btn--favorites" type="button">
                 <span class="sr-only">Открыть избранное</span>
-                <span class="user-nav__num">12</span>
               </button>
+
+              <span class="user-nav__num">12</span>
             </li>
 
             <li class="user-nav__item">
               <button class="user-nav__btn user-nav__btn--cart" type="button">
                 <span class="sr-only">Открыть карзину</span>
-                <span class="user-nav__num">12</span>
               </button>
+
+              <span class="user-nav__num">12</span>
             </li>
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
 
   <main class="main">
@@ -100,7 +102,6 @@
       </button>
 
       <ul class="top-slider__inner">
-
         <li class="top-slider__item">
           <div class="top-slider__wrapper" style="background-image: url('images/slider-img/slider-bg1.jpg');">
             <div class="top-slider__container container">
@@ -114,7 +115,7 @@
                   Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
                 </p>
 
-                <button class="top-slider__link btn" type="button">Купить сейчас</button>
+                <a class="top-slider__link btn" href="#">Купить сейчас</a>
               </div>
             </div>
           </div>
@@ -133,7 +134,7 @@
                   Только с 12 по 15 июля скидка на домашние помидорчики
                 </p>
 
-                <button class="top-slider__link btn" type="button">Купить сейчас</button>
+                <a class="top-slider__link btn" href="#">Купить сейчас</a>
               </div>
             </div>
           </div>
@@ -148,12 +149,13 @@
                   <span>Распродажа зелени</span>
                 </h3>
 
-                <button class="top-slider__link btn" type="button">Купить сейчас</button>
+                <a class="top-slider__link btn" href="#">Купить сейчас</a>
               </div>
             </div>
           </div>
         </li>
       </ul>
+
       <button class="top-slider__btn-next arrow-btn arrow-btn--next" type="button">
         <span class="sr-only">Следующий слайд</span>
       </button>
@@ -206,7 +208,7 @@
         <div data-ref="container-1">
           <ul class="top-products__filters filters">
             <li class="filters__item">
-              <button class="filters__btn1" type="button" data-filter="all">ВСЕ ТОВАРЫ</button>
+              <button class="filters__btn" type="button" data-filter="all">ВСЕ ТОВАРЫ</button>
             </li>
 
             <li class="filters__item">
@@ -308,7 +310,7 @@
                   <span class="sr-only">Добавить в избранное</span>
                 </button>
 
-                <a class="product-card__link-img" href="#">
+                <a class="product-card__link-img" href="images/products-img/product-3.jpg" data-fancybox>
                   <img class="product-card__img" src="images/products-img/product-3.jpg"
                     alt="Питахайя красная с белой мякотью">
                 </a>
@@ -343,7 +345,7 @@
                   <span class="sr-only">Добавить в избранное</span>
                 </button>
 
-                <a class="product-card__link-img" href="#">
+                <a class="product-card__link-img" href="images/products-img/product-4.jpg" data-fancybox>
                   <img class="product-card__img" src="images/products-img/product-4.jpg" alt="Кетчуп томатный детский">
                 </a>
 
@@ -378,7 +380,7 @@
                   <span class="sr-only">Добавить в избранное</span>
                 </button>
 
-                <a class="product-card__link-img" href="#">
+                <a class="product-card__link-img" href="images/products-img/product-5.jpg" data-fancybox>
                   <img class="product-card__img" src="images/products-img/product-5.jpg" alt="Морковь молодая">
                 </a>
 
@@ -412,7 +414,7 @@
                   <span class="sr-only">Добавить в избранное</span>
                 </button>
 
-                <a class="product-card__link-img" href="#">
+                <a class="product-card__link-img" href="images/products-img/product-6.jpg" data-fancybox>
                   <img class="product-card__img" src="images/products-img/product-6.jpg"
                     alt="Напиток сокосодержащий Sanpellegrino">
                 </a>
@@ -449,7 +451,7 @@
                   <span class="sr-only">Добавить в избранное</span>
                 </button>
 
-                <a class="product-card__link-img" href="#">
+                <a class="product-card__link-img" href="images/products-img/product-7.jpg" data-fancybox>
                   <img class="product-card__img" src="images/products-img/product-7.jpg"
                     alt="Кофе с коноплей органический">
                 </a>
@@ -483,7 +485,7 @@
                   <span class="sr-only">Добавить в избранное</span>
                 </button>
 
-                <a class="product-card__link-img" href="#">
+                <a class="product-card__link-img" href="images/products-img/product-8.jpg" data-fancybox>
                   <img class="product-card__img" src="images/products-img/product-8.jpg" alt="Перец оранжевый">
                 </a>
 
@@ -516,44 +518,34 @@
 
       <div class="container">
         <ul class="features__list">
-          <li class="features__item"
-            style="background-image: url('images/features-bg/image-1.jpg'); width: 630px; height: 300px;">
+          <li class="features__item" style="background-image: url('images/features-bg/image-1.jpg');">
+            <h3 class="features__subtitle">
+              Свежайшие фрукты
+            </h3>
 
-            <a class="features__link" href="#">
-              <h3 class="features__subtitle">
-                Свежайшие фрукты
-              </h3>
+            <p class="features__name">Начни фруктовое лето всего от 99 ₽</p>
 
-              <p class="features__name">Начни фруктовое лето всего от 99 ₽</p>
-
-              <p class="features__text">перейти к покупкам</p>
-            </a>
+            <a class="features__link" href="#">перейти к покупкам</a>
           </li>
 
-          <li class="features__item"
-            style="background-image: url('images/features-bg/image-2.jpg'); width: 300px; height: 300px;">
+          <li class="features__item" style="background-image: url('images/features-bg/image-2.jpg');">
+            <h3 class="features__subtitle">
+              Сезонная распродажа
+            </h3>
 
-            <a class="features__link" href="#">
-              <h3 class="features__subtitle">
-                Сезонная распродажа
-              </h3>
+            <p class="features__name">Овощепад до -50%</p>
 
-              <p class="features__name">Овощепад до -50%</p>
-
-              <p class="features__text">перейти к покупкам</p>
-            </a>
+            <a class="features__link" href="#">перейти к покупкам</a>
           </li>
 
-          <li class="features__item"
-            style="background-image: url('images/features-bg/image-3.jpg'); width: 300px; height: 300px;">
-            <a class="features__link" href="#">
-              <h3 class="features__subtitle">
-                Ням-Ням
-              </h3>
-              <p class="features__name">Свежий хлебчик</p>
+          <li class="features__item" style="background-image: url('images/features-bg/image-3.jpg');">
+            <h3 class="features__subtitle">
+              Ням-Ням
+            </h3>
 
-              <p class="features__text">перейти к покупкам</p>
-            </a>
+            <p class="features__name">Свежий хлебчик</p>
+
+            <a class="features__link" href="#">перейти к покупкам</a>
           </li>
         </ul>
       </div>
@@ -566,7 +558,6 @@
         </h2>
 
         <div data-ref="container-2">
-
           <ul class="sales-products__filters filters">
             <li class="filters__item">
               <button class="filters__btn" type="button" data-filter="all">Все товары</button>
@@ -583,370 +574,333 @@
 
           <ul class="sales-products__cards">
             <li class="sales-products__item mix category-a">
-              <article class="sales-products__card sales-product">
-                <ul class="sales-product__badges badges">
+              <article class="top-products__card product-card">
+                <ul class="product-card__badges badges">
                   <li class="badges__item badges__item--new badges__item--on">новинка</li>
                   <li class="badges__item badges__item--sale">-50%</li>
                   <li class="badges__item badges__item--hit">хит</li>
                 </ul>
 
-                <a class="sales-product__link-img" href="#">
-                  <img class="sales-product__img" src="images/sales-img/image-1.jpg" alt="ананас">
+                <a class="product-card__link-img" href="images/products-img/product-1.jpg" data-fancybox>
+                  <img class="product-card__img" src="images/products-img/product-1.jpg" alt="ананас">
                 </a>
 
-                <div class="sales-product__info">
-                  <h3 class="sales-product__name">
-                    <a class="sales-product__link" href="#">Ананас, 1 кг
-                    </a>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">
+                    <a class="product-card__link" href="#">Ананас, 1 кг</a>
                   </h3>
 
-                  <ul class="sales-product__badges badges stock">
-                    <li class="stock__item stock__item--stock stock__item--on">в наличии</li>
-                    <li class="stock__item stock__item--sold">заканчивается</li>
-                    <li class="stock__item stock__item--end">нет в наличии</li>
+                  <ul class="product-card__product-status product-status">
+                    <li class="product-status__item product-status__item--stock product-status__item--on">в наличии</li>
+                    <li class="product-status__item product-status__item--sold">заканчивается</li>
+                    <li class="product-status__item product-status__item--end">нет в наличии
+                    </li>
                   </ul>
 
-                  <div class="sales-product__bottom">
-                    <ul class="sales-product__prices sales-prices">
-                      <li class="sales-prices__item">999<span>₽</span></li>
-
-                      <li class="sales-prices__item sales-prices__item--old">1999 <span>₽</span></li>
-
-                      <p class="sales-product__num">4.5</p>
-
-                      <button class="sales-product__star" type="button">
-                        <span class="sr-only">Добавить рейтинг</span>
-                      </button>
+                  <div class="product-card__bottom">
+                    <ul class="product-card__prices prices">
+                      <li class="prices__item prices__item--old">1999 <span>₽</span></li>
+                      <li class="prices__item">999<span>₽</span></li>
                     </ul>
+
+                    <div class="product-card__star">4.5</div>
                   </div>
                 </div>
               </article>
             </li>
 
             <li class="sales-products__item mix category-a">
-              <article class="sales-products__card sales-product">
-                <ul class="sales-product__badges badges">
+              <article class="top-products__card product-card">
+                <ul class="product-card__badges badges">
                   <li class="badges__item badges__item--new badges__item--on">новинка</li>
                   <li class="badges__item badges__item--sale">-50%</li>
                   <li class="badges__item badges__item--hit">хит</li>
                 </ul>
 
-                <a class="sales-product__link-img" href="#">
-                  <img class="sales-product__img" src="images/sales-img/image-2.jpg" alt="Кофе с коноплей органический">
+                <a class="product-card__link-img" href="images/products-img/product-7.jpg" data-fancybox>
+                  <img class="product-card__img" src="images/products-img/product-7.jpg"
+                    alt="Кофе с коноплей органический">
                 </a>
 
-                <div class="sales-product__info">
-                  <h3 class="sales-product__name">
-                    <a class="sales-product__link" href="#">Кофе с коноплей органический Caffé Salomoni 250г</a>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">
+                    <a class="product-card__link" href="#">Кофе с коноплей органический Caffé Salomoni 250г</a>
                   </h3>
 
-                  <ul class="sales-product__badges badges stock">
-                    <li class="stock__item stock__item--stock">в наличии</li>
-                    <li class="stock__item stock__item--sold stock__item--on">заканчивается</li>
+                  <ul class="product-card__product-status product-status">
+                    <li class="product-status__item product-status__item--stock">в наличии</li>
+                    <li class="product-status__item product-status__item--sold product-status__item--on">заканчивается
+                    </li>
+                    <li class="product-status__item product-status__item--end">нет в наличии
+                    </li>
                   </ul>
 
-                  <div class="sales-product__bottom">
-                    <ul class="sales-product__prices sales-prices">
-                      <li class="sales-prices__item">777<span>₽</span></li>
-
-                      <li class="sales-prices__item sales-prices__item--old">877 <span>₽</span></li>
-
-                      <p class="sales-product__num">4.9</p>
-
-                      <button class="sales-product__star" type="button">
-                        <span class="sr-only">Добавить рейтинг</span>
-                      </button>
+                  <div class="product-card__bottom">
+                    <ul class="product-card__prices prices">
+                      <li class="prices__item prices__item--old">877<span>₽</span></li>
+                      <li class="prices__item">777<span>₽</span></li>
                     </ul>
+
+                    <div class="product-card__star">4.9</div>
                   </div>
                 </div>
               </article>
             </li>
 
             <li class="sales-products__item mix category-a">
-              <article class="sales-products__card sales-product">
-                <ul class="sales-product__badges badges">
+              <article class="top-products__card product-card">
+                <ul class="product-card__badges badges">
                   <li class="badges__item badges__item--new badges__item--on">новинка</li>
                   <li class="badges__item badges__item--sale">-50%</li>
                   <li class="badges__item badges__item--hit">хит</li>
                 </ul>
 
-                <a class="sales-product__link-img" href="#">
-                  <img class="sales-product__img" src="images/sales-img/image-3.jpg" alt="Клубника">
+                <a class="product-card__link-img" href="images/products-img/product-9.jpg" data-fancybox>
+                  <img class="product-card__img" src="images/products-img/product-9.jpg" alt="Клубника">
                 </a>
 
-                <div class="sales-product__info">
-                  <h3 class="sales-product__name">
-                    <a class="sales-product__link" href="#">Клубника, 1 кг</a>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">
+                    <a class="product-card__link" href="#">Клубника, 1 кг</a>
                   </h3>
 
-                  <ul class="sales-product__badges badges stock">
-                    <li class="stock__item stock__item--stock">в наличии</li>
-                    <li class="stock__item stock__item--sold">заканчивается</li>
-                    <li class="stock__item stock__item--end stock__item--on">нет в наличии</li>
+                  <ul class="product-card__product-status product-status">
+                    <li class="product-status__item product-status__item--stock">в наличии</li>
+                    <li class="product-status__item product-status__item--sold">заканчивается</li>
+                    <li class="product-status__item product-status__item--end product-status__item--on">нет в наличии
+                    </li>
                   </ul>
 
-                  <div class="sales-product__bottom">
-                    <ul class="sales-product__prices sales-prices">
-                      <li class="sales-prices__item">440<span>₽</span></li>
-
-                      <li class="sales-prices__item sales-prices__item--old">600 <span>₽</span></li>
-
-                      <p class="sales-product__num">5.0</p>
-
-                      <button class="sales-product__star" type="button">
-                        <span class="sr-only">Добавить рейтинг</span>
-                      </button>
+                  <div class="product-card__bottom">
+                    <ul class="product-card__prices prices">
+                      <li class="prices__item prices__item--old">600<span>₽</span></li>
+                      <li class="prices__item">440<span>₽</span></li>
                     </ul>
+
+                    <div class="product-card__star">5.0</div>
                   </div>
                 </div>
               </article>
             </li>
 
             <li class="sales-products__item mix category-a">
-              <article class="sales-products__card sales-product">
-                <ul class="sales-product__badges badges">
+              <article class="top-products__card product-card">
+                <ul class="product-card__badges badges">
                   <li class="badges__item badges__item--new badges__item--on">новинка</li>
                   <li class="badges__item badges__item--sale">-50%</li>
                   <li class="badges__item badges__item--hit">хит</li>
                 </ul>
 
-                <a class="sales-product__link-img" href="#">
-                  <img class="sales-product__img" src="images/sales-img/image-4.jpg" alt="Манго">
+                <a class="product-card__link-img" href="images/products-img/product-10.jpg" data-fancybox>
+                  <img class="product-card__img" src="images/products-img/product-10.jpg" alt="Манго">
                 </a>
 
-                <div class="sales-product__info">
-                  <h3 class="sales-product__name">
-                    <a class="sales-product__link" href="#">Манго, 1 шт</a>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">
+                    <a class="product-card__link" href="#">Манго, 1 шт</a>
                   </h3>
 
-                  <ul class="sales-product__badges badges stock">
-                    <li class="stock__item stock__item--stock stock__item--on">в наличии</li>
-                    <li class="stock__item stock__item--sold">заканчивается</li>
-                    <li class="stock__item stock__item--end">нет в наличии</li>
+                  <ul class="product-card__product-status product-status">
+                    <li class="product-status__item product-status__item--stock product-status__item--on">в наличии</li>
+                    <li class="product-status__item product-status__item--sold">заканчивается</li>
+                    <li class="product-status__item product-status__item--end">нет в наличии
+                    </li>
                   </ul>
 
-                  <div class="sales-product__bottom">
-                    <ul class="sales-product__prices sales-prices">
-                      <li class="sales-prices__item">660<span>₽</span></li>
-
-                      <li class="sales-prices__item sales-prices__item--old">960 <span>₽</span></li>
-
-                      <p class="sales-product__num">5.0</p>
-
-                      <button class="sales-product__star" type="button">
-                        <span class="sr-only">Добавить рейтинг</span>
-                      </button>
+                  <div class="product-card__bottom">
+                    <ul class="product-card__prices prices">
+                      <li class="prices__item prices__item--old">960<span>₽</span></li>
+                      <li class="prices__item">660<span>₽</span></li>
                     </ul>
+
+                    <div class="product-card__star">5.0</div>
                   </div>
                 </div>
               </article>
             </li>
 
             <li class="sales-products__item mix category-a">
-              <article class="sales-products__card sales-product">
-                <ul class="sales-product__badges badges">
+              <article class="top-products__card product-card">
+                <ul class="product-card__badges badges">
                   <li class="badges__item badges__item--new badges__item--on">новинка</li>
                   <li class="badges__item badges__item--sale">-50%</li>
                   <li class="badges__item badges__item--hit">хит</li>
                 </ul>
 
-                <a class="sales-product__link-img" href="#">
-                  <img class="sales-product__img" src="images/sales-img/image-5.jpg" alt="Лосось">
+                <a class="product-card__link-img" href="images/products-img/product-11.jpg" data-fancybox>
+                  <img class="product-card__img" src="images/products-img/product-11.jpg" alt="Лосось">
                 </a>
 
-                <div class="sales-product__info">
-                  <h3 class="sales-product__name">
-                    <a class="sales-product__link" href="#">Лосось, 1 кг</a>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">
+                    <a class="product-card__link" href="#">Лосось, 1 кг</a>
                   </h3>
 
-                  <ul class="sales-product__badges badges stock">
-                    <li class="stock__item stock__item--stock stock__item--on">в наличии</li>
-                    <li class="stock__item stock__item--sold">заканчивается</li>
-                    <li class="stock__item stock__item--end">нет в наличии</li>
+                  <ul class="product-card__product-status product-status">
+                    <li class="product-status__item product-status__item--stock product-status__item--on">в наличии</li>
+                    <li class="product-status__item product-status__item--sold">заканчивается</li>
+                    <li class="product-status__item product-status__item--end">нет в наличии
+                    </li>
                   </ul>
 
-                  <div class="sales-product__bottom">
-                    <ul class="sales-product__prices sales-prices">
-                      <li class="sales-prices__item">999<span>₽</span></li>
-
-                      <li class="sales-prices__item sales-prices__item--old">1999 <span>₽</span></li>
-
-                      <p class="sales-product__num">4.5</p>
-
-                      <button class="sales-product__star" type="button">
-                        <span class="sr-only">Добавить рейтинг</span>
-                      </button>
+                  <div class="product-card__bottom">
+                    <ul class="product-card__prices prices">
+                      <li class="prices__item prices__item--old">1999<span>₽</span></li>
+                      <li class="prices__item">999<span>₽</span></li>
                     </ul>
+
+                    <div class="product-card__star">4.5</div>
                   </div>
                 </div>
               </article>
             </li>
 
             <li class="sales-products__item mix category-b">
-              <article class="sales-products__card sales-product">
-                <ul class="sales-product__badges badges">
+              <article class="top-products__card product-card">
+                <ul class="product-card__badges badges">
                   <li class="badges__item badges__item--new">новинка</li>
                   <li class="badges__item badges__item--sale">-50%</li>
                   <li class="badges__item badges__item--hit badges__item--on">хит</li>
                 </ul>
 
-                <a class="sales-product__link-img" href="#">
-                  <img class="sales-product__img" src="images/sales-img/image-6.jpg" alt="Сок Granini овощной">
+                <a class="product-card__link-img" href="images/products-img/product-12.jpg" data-fancybox>
+                  <img class="product-card__img" src="images/products-img/product-12.jpg" alt="Сок Granini овощной">
                 </a>
 
-                <div class="sales-product__info">
-                  <h3 class="sales-product__name">
-                    <a class="sales-product__link" href="#">Сок Granini овощной 100%, 0.5л</a>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">
+                    <a class="product-card__link" href="#">Сок Granini овощной 100%, 0.5л</a>
                   </h3>
 
-                  <ul class="sales-product__badges badges stock">
-                    <li class="stock__item stock__item--stock">в наличии</li>
-                    <li class="stock__item stock__item--sold stock__item--on">заканчивается</li>
-                    <li class="stock__item stock__item--end">нет в наличии</li>
+                  <ul class="product-card__product-status product-status">
+                    <li class="product-status__item product-status__item--stock">в наличии</li>
+                    <li class="product-status__item product-status__item--sold product-status__item--on">заканчивается
+                    </li>
+                    <li class="product-status__item product-status__item--end">нет в наличии
+                    </li>
                   </ul>
 
-                  <div class="sales-product__bottom">
-                    <ul class="sales-product__prices sales-prices">
-                      <li class="sales-prices__item">180<span>₽</span></li>
-
-                      <li class="sales-prices__item sales-prices__item--old">230 <span>₽</span></li>
-
-                      <p class="sales-product__num">4.9</p>
-
-                      <button class="sales-product__star" type="button">
-                        <span class="sr-only">Добавить рейтинг</span>
-                      </button>
+                  <div class="product-card__bottom">
+                    <ul class="product-card__prices prices">
+                      <li class="prices__item prices__item--old">230<span>₽</span></li>
+                      <li class="prices__item">180<span>₽</span></li>
                     </ul>
+
+                    <div class="product-card__star">4.9</div>
                   </div>
                 </div>
               </article>
             </li>
 
             <li class="sales-products__item mix category-b">
-              <article class="sales-products__card sales-product">
-                <ul class="sales-product__badges badges">
+              <article class="top-products__card product-card">
+                <ul class="product-card__badges badges">
                   <li class="badges__item badges__item--new">новинка</li>
                   <li class="badges__item badges__item--sale">-50%</li>
                   <li class="badges__item badges__item--hit badges__item--on">хит</li>
                 </ul>
 
-                <a class="sales-product__link-img" href="#">
-                  <img class="sales-product__img" src="images/sales-img/image-7.jpg" alt="Фруктовая корзина">
+                <a class="product-card__link-img" href="images/products-img/product-13.jpg" data-fancybox>
+                  <img class="product-card__img" src="images/products-img/product-13.jpg" alt="Фруктовая корзина">
                 </a>
 
-                <div class="sales-product__info">
-                  <h3 class="sales-product__name">
-                    <a class="sales-product__link" href="#">Фруктовая корзина, 1 шт</a>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">
+                    <a class="product-card__link" href="#">Фруктовая корзина, 1 шт</a>
                   </h3>
 
-                  <ul class="sales-product__badges badges stock">
-                    <li class="stock__item stock__item--stock stock__item--on">в наличии</li>
-                    <li class="stock__item stock__item--sold">заканчивается</li>
-                    <li class="stock__item stock__item--end">нет в наличии</li>
+                  <ul class="product-card__product-status product-status">
+                    <li class="product-status__item product-status__item--stock product-status__item--on">в наличии</li>
+                    <li class="product-status__item product-status__item--sold">заканчивается</li>
+                    <li class="product-status__item product-status__item--end">нет в наличии</li>
                   </ul>
 
-                  <div class="sales-product__bottom">
-                    <ul class="sales-product__prices sales-prices">
-                      <li class="sales-prices__item">3990<span>₽</span></li>
-
-                      <li class="sales-prices__item sales-prices__item--old">5990 <span>₽</span></li>
-
-                      <p class="sales-product__num">4.8</p>
-
-                      <button class="sales-product__star" type="button">
-                        <span class="sr-only">Добавить рейтинг</span>
-                      </button>
+                  <div class="product-card__bottom">
+                    <ul class="product-card__prices prices">
+                      <li class="prices__item prices__item--old">5990<span>₽</span></li>
+                      <li class="prices__item">3990<span>₽</span></li>
                     </ul>
+
+                    <div class="product-card__star">4.8</div>
                   </div>
                 </div>
               </article>
             </li>
 
             <li class="sales-products__item mix category-b">
-              <article class="sales-products__card sales-product">
-                <ul class="sales-product__badges badges">
+              <article class="top-products__card product-card">
+                <ul class="product-card__badges badges">
                   <li class="badges__item badges__item--new">новинка</li>
                   <li class="badges__item badges__item--sale">-50%</li>
                   <li class="badges__item badges__item--hit badges__item--on">хит</li>
                 </ul>
 
-                <a class="sales-product__link-img" href="#">
-                  <img class="sales-product__img" src="images/sales-img/image-8.jpg" alt="Свинина мякоть">
+                <a class="product-card__link-img" href="images/products-img/product-14.jpg" data-fancybox>
+                  <img class="product-card__img" src="images/products-img/product-14.jpg" alt="Свинина мякоть">
                 </a>
 
-                <div class="sales-product__info">
-                  <h3 class="sales-product__name">
-                    <a class="sales-product__link" href="#">Свинина мякоть, 1 кг</a>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">
+                    <a class="product-card__link" href="#">Свинина мякоть, 1 кг</a>
                   </h3>
 
-                  <ul class="sales-product__badges badges stock">
-                    <li class="stock__item stock__item--stock stock__item--on">в наличии</li>
-                    <li class="stock__item stock__item--sold">заканчивается</li>
-                    <li class="stock__item stock__item--sold">нет в наличии</li>
+                  <ul class="product-card__product-status product-status">
+                    <li class="product-status__item product-status__item--stock product-status__item--on">в наличии</li>
+                    <li class="product-status__item product-status__item--sold">заканчивается</li>
+                    <li class="product-status__item product-status__item--end">нет в наличии
+                    </li>
                   </ul>
 
-                  <div class="sales-product__bottom">
-                    <ul class="sales-product__prices sales-prices">
-                      <li class="sales-prices__item">499<span>₽</span></li>
-
-                      <li class="sales-prices__item sales-prices__item--old">599 <span>₽</span></li>
-
-                      <p class="sales-product__num">4.6</p>
-
-                      <button class="sales-product__star" type="button">
-                        <span class="sr-only">Добавить рейтинг</span>
-                      </button>
+                  <div class="product-card__bottom">
+                    <ul class="product-card__prices prices">
+                      <li class="prices__item prices__item--old">599<span>₽</span></li>
+                      <li class="prices__item">499<span>₽</span></li>
                     </ul>
+
+                    <div class="product-card__star">4.6</div>
                   </div>
                 </div>
               </article>
             </li>
           </ul>
         </div>
-        <button class="sales-product__btn btn" type="button">Показать еще</button>
+        <button class="sales-products__btn btn" type="button">Показать еще</button>
 
       </div>
     </section>
 
-    <section class="brands">
+    <section class="brands-slider">
       <h2 class="sr-only">Бренды товаров</h2>
 
       <div class="container">
-        <ul class="brands__list">
-          <li class="brands__item">
-            <a class="brands__link" href="#">
-              <img class="brands__img" src="images/brands/sprite-icon.svg" alt="Логотип Спрайт">
-            </a>
+        <ul class="brands-slider__inner">
+          <li class="brands-slider__item">
+            <img class="brands-slider__img" src="images/brands/sprite-icon.svg" alt="Логотип Спрайт" width="80">
           </li>
 
-          <li class="brands__item">
-            <a class="brands__link" href="#">
-              <img class="brands__img" src="images/brands/dr-pepper-icon.svg" alt="Логотип Доктор Пеппер">
-            </a>
+          <li class="brands-slider__item">
+            <img class="brands-slider__img" src="images/brands/dr-pepper-icon.svg" alt="Логотип Доктор Пеппер"
+              width="80">
           </li>
 
-          <li class="brands__item">
-            <a class="brands__link" href="#">
-              <img class="brands__img" src="images/brands/cocacola-icon.svg" alt="Логотип Кока-Кола">
-            </a>
+          <li class="brands-slider__item">
+            <img class="brands-slider__img" src="images/brands/cocacola-icon.svg" alt="Логотип Кока-Кола" width="80">
           </li>
 
-          <li class="brands__item">
-            <a class="brands__link" href="#">
-              <img class="brands__img" src="images/brands/pepsi-icon.svg" alt="Логотип Пепси">
-            </a>
+          <li class="brands-slider__item">
+            <img class="brands-slider__img" src="images/brands/pepsi-icon.svg" alt="Логотип Пепси" width="80">
           </li>
 
-          <li class="brands__item">
-            <a class="brands__link" href="#">
-              <img class="brands__img" src="images/brands/redbull-icon.svg" alt="Логотип Рэдбул">
-            </a>
+          <li class="brands-slider__item">
+            <img class="brands-slider__img" src="images/brands/redbull-icon.svg" alt="Логотип Рэдбул" width="80">
           </li>
 
-          <li class="brands__item">
-            <a class="brands__link" href="#">
-              <img class="brands__img" src="images/brands/fanta-icon.svg" alt="Логотип Фанта">
-            </a>
+          <li class="brands-slider__item">
+            <img class="brands-slider__img" src="images/brands/fanta-icon.svg" alt="Логотип Фанта" width="80">
+          </li>
+
+          <li class="brands-slider__item">
+            <img class="brands-slider__img" src="images/brands/cocacola-icon.svg" alt="Логотип Кока-кола" width="80">
           </li>
         </ul>
       </div>
@@ -954,57 +908,58 @@
 
     <section class="news">
       <div class="container">
-        <div class="news__top-news">
+        <div class="news__top">
           <h2 class="news__title title">Наши новости</h2>
           <a class="news__top-link" href="#">все новости</a>
         </div>
 
-        <div class="news__inner">
-          <ul class="news__items">
-            <li class="news__item">
-              <articl class="news__link-box">
-                <a class="news__link" href="#">
-                  <div class="news__date">
-                    <p class="news__num">июль <span>15</span></p>
-                  </div>
+        <ul class="news__items">
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <div class="news__date">
+                <span class="news__month">июль</span>
+                <span class="news__number">15</span>
+              </div>
 
-                  <img class="news__img" src="images/news-bg/image-1.jpg" alt="Изображение клубники">
+              <div class="news__image-box">
+                <img class="news__img" src="images/news-bg/image-1.jpg" alt="Изображение клубники">
+              </div>
 
-                  <p class="news__text">Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК.
-                    Торопись, пока всё не разобрали!
-                  </p>
-                </a>
-              </articl>
-            </li>
+              <p class="news__text">Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись,
+                пока всё не разобрали!</p>
+            </a>
+          </li>
 
-            <li class="news__item">
-              <articl class="news__link-box">
-                <a class="news__link" href="#">
-                  <div class="news__date">
-                    <p class="news__num">май <span>07</span></p>
-                  </div>
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <div class="news__date">
+                <span class="news__month">май</span>
+                <span class="news__number">07</span>
+              </div>
 
-                  <img class="news__img" src="images/news-bg/image-2.jpg" alt="Изображение Манго">
+              <div class="news__image-box">
+                <img class="news__img" src="images/news-bg/image-2.jpg" alt="Изображение манго">
+              </div>
 
-                  <p class="news__text">Шикарнейший выбор манго в нашем онлайн-маркете</p>
-                </a>
-              </articl>
-            </li>
+              <p class="news__text">Шикарнейший выбор манго в нашем онлайн-маркете</p>
+            </a>
+          </li>
 
-            <li class="news__item">
-              <articl class="news__link-box">
-                <a class="news__link" href="#">
-                  <div class="news__date">
-                    <p class="news__num">февраль <span>20</span></p>
-                  </div>
-                  <img class="news__img" src="images/news-bg/image-3.jpg" alt="Изображение Папайи">
+          <li class="news__item">
+            <a class="news__link" href="#">
+              <div class="news__date">
+                <span class="news__month">февраль</span>
+                <span class="news__number">20</span>
+              </div>
 
-                  <p class="news__text">Всё, что вы хотели знать о папайя</p>
-                </a>
-              </articl>
-            </li>
-          </ul>
-        </div>
+              <div class="news__image-box">
+                <img class="news__img" src="images/news-bg/image-3.jpg" alt="Изображение папайи">
+              </div>
+
+              <p class="news__text">Всё, что вы хотели знать о папайя</p>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   </main>

@@ -1,0 +1,27 @@
+.product-status {
+  margin-bottom: 4px;
+
+  &__item {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    display: none;
+
+    &--stock {
+      color: $green-900;
+    }
+
+    &--sold {
+      color: $red-900;
+    }
+
+    &--end {
+      color: $silver-600;
+    }
+
+    &--on {
+      display: block;
+    }
+  }
+}

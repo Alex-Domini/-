@@ -2,9 +2,11 @@
   padding: 72px 0;
   background-color: $silver-100;
 
-  .filters__item {
-    &:not(:last-child) {
-      margin-right: 30px;
+  .filters {
+    &__item {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
     }
   }
 
@@ -18,166 +20,71 @@
     grid-gap: 30px;
     margin-bottom: 44px;
   }
-}
 
-.sales-product {
-  display: flex;
-  position: relative;
-  padding: 12px;
-  max-width: 300px;
-  height: 100%;
-  border: 1px solid rgba(17, 17, 17, 0.2);
-  border-radius: 6px;
-  background-color: $white;
-  transition: border 0.3s;
+  .product-card {
+    flex-direction: row;
+    padding: 12px;
+    background-color: $white;
 
-  &:hover {
-    border: 1px solid $green-900;
+    &__link-img {
+      flex: 0 0 100px;
+      padding: 0;
+      height: 100px;
+      margin-right: 12px;
+    }
+
+    &__info {
+      padding: 0;
+    }
+
+    &__name {
+      margin-bottom: 7px;
+    }
+
+    &__star {
+      display: flex;
+      font-size: 14px;
+      font-weight: 700;
+      color: $dark-500;
+      line-height: 1;
+      &::after {
+        content: "";
+        margin-left: 2px;
+        width: 16px;
+        height: 15px;
+        mask-image: url("../images/sprite.svg#star-icon");
+        background-color: $yellow-900;
+        mask-size: cover;
+        mask-repeat: no-repeat;
+        mask-position: center center;
+      }
+    }
   }
 
-  &__badges {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-  }
-
-  &__link-img {
-    position: relative;
+  .prices {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row-reverse;
+    align-items: flex-end;
 
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      transition: background-color 0.3s;
-    }
+    &__item {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1;
 
-    &:hover::before {
-      content: "";
-      background-color: rgba(0, 0, 0, 0.1);
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
+      span {
+        font-size: 14px;
+      }
 
-    &:hover::after {
-      background-image: url("../../images/icons/search-green-icon.svg");
-      width: 20px;
-      height: 20px;
-      z-index: 2;
-    }
-  }
-
-  &__img {
-    max-width: 100px;
-    width: 100%;
-    object-fit: contain;
-    margin-right: 10px;
-  }
-
-  &__info {
-    max-width: 164px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    letter-spacing: 0.03em;
-  }
-
-  &__link {
-    color: $dark-900;
-    letter-spacing: 0.03em;
-    @include line-clamp(3);
-  }
-
-  &__numb {
-    display: flex;
-  }
-
-  &__num {
-    font-weight: 700;
-    color: $dark-500;
-  }
-
-  &__star {
-    width: 16px;
-    height: 15px;
-    border-radius: 3px;
-    outline: transparent;
-    &::before {
-      display: block;
-      content: "";
-      right: -20px;
-      bottom: 0;
-      width: 16px;
-      height: 15px;
-      mask-image: url("../images/sprite.svg#star-icon");
-      background-color: $silver-600;
-      mask-size: cover;
-      mask-repeat: no-repeat;
-      mask-position: center center;
-      transition: background-color 0.3s;
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.5);
-    }
-
-    &:hover::before {
-      background-color: #ffb800;
-    }
-
-    &:active::before {
-      background-color: rgba(238, 215, 155, 0.5);
+      &--old {
+        font-size: 12px;
+        font-weight: 400;
+        margin-left: 12px;
+      }
     }
   }
 
   &__btn {
     display: block;
     margin: 0 auto;
-  }
-}
-
-.stock {
-  left: 118px;
-  top: 75px;
-}
-
-.sales-prices {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-
-  &__item {
-    font-size: 20px;
-    letter-spacing: 0.03em;
-    line-height: 1;
-    color: $dark-500;
-    margin-right: 12px;
-    span {
-      font-size: 12px;
-    }
-
-    &--old {
-      position: relative;
-      display: block;
-      font-size: 12px;
-      color: $silver-600;
-      margin-right: 12px;
-      &::before {
-        position: absolute;
-        content: "";
-        border-bottom: 1px solid $silver-600;
-        width: 100%;
-        height: 50%;
-        transform: rotate(-12deg);
-      }
-    }
   }
 }
