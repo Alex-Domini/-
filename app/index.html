@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ФрешОК онлайн-маркет | Главная страница</title>
   <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
-  <!-- <link rel="stylesheet" href="css/jquery.fancybox.min.css"> -->
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -16,6 +15,118 @@
     <nav class="header__nav">
       <div class="header__top header-top">
         <div class="header-top__container container">
+
+          <button class="header-top__burger burger" type="button">
+            <span class="burger__line"></span>
+            <span class="sr-only">открыть меню</span>
+          </button>
+
+
+
+          <div class="header-top__menu menu">
+            <div class="container">
+              <div class="menu__box">
+                <a class="menu__logo logo" href="#">
+                  <img class="logo__img" src="images/icons/logo-green-icon.svg" width="200" height="60"
+                    alt="Логотип компании">
+                </a>
+
+                <button class="menu__burger burger" type="button">
+                  <span class="burger__line"></span>
+                  <span class="sr-only">открыть меню</span>
+                </button>
+              </div>
+              <ul class="menu__login">
+                <li class="menu__login-item">
+                  <a class="menu__login-link menu__login-link--enter" href="#">Вход</a>
+                </li>
+
+                <li class="menu__login-item">
+                  <a class="menu__login-link menu__login-link--registration" href="#">Регистрация</a>
+                </li>
+              </ul>
+
+              <button class="menu__catalog" type="button">Каталог товаров</button>
+
+              <addres class="menu__contacts contacts">
+                <ul class="contacts__list">
+                  <li class="contacts__item">
+                    <a class="contacts__link contacts__link--phone" href="tel:+7907288365">+7 907 288 365</a>
+                  </li>
+
+                  <li class="contacts__item">
+                    <a class="contacts__link contacts__link--address" href="#">Санкт-Петербург, Ул. Ленина, 1</a>
+                  </li>
+                </ul>
+
+                <ul class="contacts__social social">
+                  <li class="social__item">
+                    <a class="social__link" href="#" target="_blank"
+                      style="background-image: url(images/icons/facebook-icon.svg); width: 32px; height: 32px;">
+                      <span class="sr-only">перейти в фейсбук</span>
+                    </a>
+                  </li>
+
+                  <li class="social__item">
+                    <a class="social__link" href="#" target="_blank"
+                      style="background-image: url(images/icons/youtube-icon.svg); width: 32px; height: 32px;">
+                      <span class="sr-only">перейти в ютуб</span>
+                    </a>
+                  </li>
+
+                  <li class="social__item">
+                    <a class="social__link" href="#" target="_blank"
+                      style="background-image: url(images/icons/telegram-icon.svg); width: 32px; height: 32px;">
+                      <span class="sr-only">перейти в телеграм</span>
+                    </a>
+                  </li>
+
+                  <li class="social__item">
+                    <a class="social__link" href="#" target="_blank"
+                      style="background-image: url(images/icons/instagram-icon.svg); width: 32; height: 32;">
+                      <span class="sr-only">перейти в инстаграм</span>
+                    </a>
+                  </li>
+                </ul>
+              </addres>
+
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Доставка</a>
+                </li>
+
+                <li class="menu__item">
+                  <a class="menu__link" href="#"> О Нас</a>
+                </li>
+
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Новости</a>
+                </li>
+
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Контакты</a>
+                </li>
+
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Акции</a>
+                </li>
+
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Вакансии</a>
+                </li>
+
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Отзывы</a>
+                </li>
+
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Публичная оферта</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
           <ul class="header-top__list">
             <li class="header-top__item-left">
               <a class="header-top__link header-top__link--delivery" href="#">адрес и время доставки</a>
@@ -54,6 +165,10 @@
             <img class="logo__img" src="images/icons/logo-icon.svg" width="200" height="60" alt="Логотип компании">
           </a>
 
+          <a class="header__logo logo-mobile" href="#">
+            <img class="logo__img" src="images/icons/logo-icon-2.svg" width="54" alt="Логотип компании">
+          </a>
+
           <button class="header__catalog" type="button">Каталог продуктов</button>
 
           <form class="header__form">
@@ -64,6 +179,12 @@
           </form>
 
           <ul class="header__user-nav user-nav">
+            <li class="user-nav__item">
+              <button class="user-nav__btn user-nav__btn--search" type="button">
+                <span class="sr-only">Открыть поиск</span>
+              </button>
+            </li>
+
             <li class="user-nav__item">
               <button class="user-nav__btn user-nav__btn--profile" type="button">
                 <span class="sr-only">Открыть личный кабинет</span>
@@ -91,7 +212,7 @@
     </nav>
   </header>
 
-  <main class="main">
+  <!-- <main class="main">
     <h1 class="sr-only">Фрешок онлайн-маркет</h1>
 
     <section class="top-slider">
@@ -1079,8 +1200,9 @@
         </ul>
       </div>
     </div>
+  </footer> -->
 
-  </footer>
+
   <script src="js/main.min.js"></script>
 </body>
 

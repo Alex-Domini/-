@@ -1,4 +1,16 @@
 $(function () {
+  $(".burger").on("click", function () {
+    $(".burger").toggleClass("burger--active");
+    $(".menu").toggleClass("menu--active");
+    $("body").toggleClass("hidden");
+  });
+
+  $(".menu__link").on("click", function () {
+    $(".burger").removeClass("burger--active");
+    $(".menu").removeClass("menu--active");
+    $("body").removeClass("hidden");
+  });
+
   $(".top-slider__inner").slick({
     dots: false,
     prevArrow: $(".top-slider__btn-prev"),

@@ -34,6 +34,29 @@ body {
 
 .logo {
   flex: 0 0 200px;
+
+  @include media-1 {
+    display: none;
+  }
+}
+
+.menu__logo {
+  flex: 0 0 200px;
+  display: inline-block;
+  position: relative;
+}
+
+.logo-mobile {
+  flex: 0 0 56px;
+  display: none;
+
+  @include media-1 {
+    display: block;
+  }
+
+  @include media-2 {
+    flex: 0 0 36px;
+  }
 }
 
 .logo__img {
