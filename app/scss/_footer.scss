@@ -1,33 +1,84 @@
 .footer {
   padding-top: 30px;
   background-color: $dark-800;
+
+  @include media-2 {
+    padding-top: 24px;
+  }
 }
 
 .footer-top {
   &__logo {
     display: inline-block;
+
+    @include media-2 {
+      display: block;
+    }
+  }
+
+  .contacts {
+    @include media-2 {
+      text-align: center;
+    }
+  }
+
+  .social {
+    @include media-2 {
+      justify-content: center;
+    }
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
-    padding: 26px 0 32px;
+    padding: 24px 0;
     font-weight: 400;
     line-height: 1.4;
     color: $white;
+
+    @include media-2 {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
   }
 
   &__form {
     max-width: 306px;
     width: 100%;
+
+    @include media-2 {
+      max-width: 300px;
+    }
+  }
+
+  &__line {
+    @include media-2 {
+      display: block;
+      width: 100%;
+      border-top: 1px solid $white;
+      opacity: 0.1;
+      margin-bottom: 24px;
+    }
   }
 
   &__list {
     column-count: 3;
     column-gap: 74px;
+
+    @include media-1 {
+      column-count: 2;
+    }
+
+    @include media-2 {
+      margin-bottom: 18px;
+      column-width: 0;
+      padding: 0 14px 0 51px;
+    }
   }
 
   &__item {
+    width: 130px;
+
     &:not(:last-child) {
       margin-bottom: 18px;
     }
@@ -55,6 +106,10 @@
 
 .form-subscribe {
   margin-right: 63px;
+
+  @include media-2 {
+    margin-right: 0;
+  }
 
   &__text {
     font-weight: 400;
@@ -96,6 +151,10 @@
     color: $white;
     transition: background-color 0.3s;
 
+    @include media-2 {
+      padding: 12px;
+    }
+
     &:focus {
       box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
     }
@@ -115,6 +174,10 @@
   max-width: 215px;
   width: 100%;
   font-style: inherit;
+
+  @include media-2 {
+    margin-bottom: 24px;
+  }
 
   &__item {
     margin-bottom: 18px;
@@ -150,13 +213,21 @@
     display: block;
     border-top: 1px solid $white;
     opacity: 0.1;
-    padding-top: 24px;
+    padding-top: 32px;
+
+    @include media-2 {
+      padding-top: 24px;
+    }
   }
 
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-2 {
+      flex-direction: column-reverse;
+    }
   }
 
   &__copy {
@@ -171,6 +242,10 @@
 
   &__list {
     display: flex;
+
+    @include media-2 {
+      margin-bottom: 24px;
+    }
   }
 
   &__item {

@@ -11,10 +11,25 @@ $(function () {
     $("body").removeClass("hidden");
   });
 
+  $(".user-nav__btn--search").on("click", function () {
+    $(".user-nav__btn--search").toggleClass("user-nav__btn--search--active");
+    $(".header__form").toggleClass("header__form--active");
+    $("body").toggleClass("hidden");
+  });
+
   $(".top-slider__inner").slick({
     dots: false,
     prevArrow: $(".top-slider__btn-prev"),
     nextArrow: $(".top-slider__btn-next"),
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          arrows: false,
+          dots: true,
+        },
+      },
+    ],
   });
 
   var containerEl1 = document.querySelector('[data-ref="container-1"]');
@@ -37,5 +52,34 @@ $(function () {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   });
 });

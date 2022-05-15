@@ -1,15 +1,33 @@
 .news {
   padding-bottom: 72px;
 
+  @include media-4 {
+    padding-bottom: 30px;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+
+    @include media-4 {
+      margin-bottom: 24px;
+    }
+
+    @include media-4 {
+      display: block;
+    }
   }
 
   &__title {
     display: contents;
+
+    @include media-4 {
+      display: block;
+      text-align: left;
+      margin-bottom: 12px;
+    }
   }
 
   &__top-link {
@@ -60,6 +78,10 @@
   &__items {
     display: flex;
     justify-content: space-between;
+
+    @include media-4 {
+      display: block;
+    }
   }
 
   &__item {
@@ -72,13 +94,15 @@
     &:last-child {
       margin-right: 0;
     }
+
+    @include media-4 {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
   }
 
   &__link {
     position: relative;
-    font-size: 16px;
-    line-height: 1.5;
-    color: $dark-900;
     transition: color 0.3s;
 
     &:hover {
@@ -141,8 +165,16 @@
   }
 
   &__text {
-    padding: 18px 18px 0;
-    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $dark-900;
+    padding: 18px;
     @include line-clamp(5);
+
+    @include media-4 {
+      font-size: 14px;
+      line-height: 1.4;
+      padding: 15px;
+    }
   }
 }

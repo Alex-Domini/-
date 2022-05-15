@@ -1,8 +1,45 @@
 .top-products {
   padding: 72px 0;
 
+  @include media-2 {
+    padding: 62px 0;
+  }
+
+  @include media-3 {
+    padding: 53px 0;
+  }
+
+  .filters {
+    @include media-2 {
+      margin-bottom: 38px;
+    }
+
+    @include media-3 {
+      margin-bottom: 9px;
+    }
+
+    &__item {
+      @include media-3 {
+        &:not(:last-child) {
+          margin-right: 25px;
+        }
+        margin-bottom: 15px;
+      }
+
+      @include media-4 {
+        &:first-child {
+          margin: 0 31px 0 24px;
+        }
+      }
+    }
+  }
+
   &__title {
     margin-bottom: 32px;
+
+    @include media-3 {
+      margin-bottom: 24px;
+    }
   }
 
   &__cards {
@@ -10,6 +47,22 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-bottom: 41px;
+
+    @include media-2 {
+      margin-bottom: 31px;
+      gap: 20px;
+    }
+
+    @include media-3 {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    @include media-4 {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 24px;
+      gap: 5px;
+    }
   }
 
   &__btn {

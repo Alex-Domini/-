@@ -2,16 +2,36 @@
   padding: 72px 0;
   background-color: $silver-100;
 
+  @include media-1 {
+    padding: 62px 0;
+  }
+
+  @include media-2 {
+    padding: 55px 0;
+  }
+
+  @include media-2 {
+    padding: 48px 0;
+  }
+
   .filters {
     &__item {
       &:not(:last-child) {
         margin-right: 30px;
       }
     }
+
+    @include media-4 {
+      margin-bottom: 29px;
+    }
   }
 
   &__title {
     margin-bottom: 32px;
+
+    @include media-4 {
+      margin-bottom: 24px;
+    }
   }
 
   &__cards {
@@ -19,12 +39,44 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     margin-bottom: 44px;
+
+    @include media-1 {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    @include media-2 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    @include media-3 {
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__item {
+    @include media-4 {
+      padding: 0 20px;
+    }
   }
 
   .product-card {
     flex-direction: row;
     padding: 12px;
     background-color: $white;
+
+    @include media-1 {
+      max-width: 100%;
+    }
+
+    @include media-4 {
+      max-width: 300px;
+      width: 100%;
+      padding: 11px 12px;
+    }
 
     &__link-img {
       flex: 0 0 100px;
@@ -86,5 +138,9 @@
   &__btn {
     display: block;
     margin: 0 auto;
+
+    @include media-4 {
+      font-size: 18px;
+    }
   }
 }

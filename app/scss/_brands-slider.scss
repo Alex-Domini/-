@@ -1,6 +1,14 @@
 .brands-slider {
   padding: 72px 0;
 
+  @include media-2 {
+    padding: 58px 0;
+  }
+
+  @include media-4 {
+    padding: 45px 0;
+  }
+
   &__inner {
     display: flex;
     flex-wrap: wrap;

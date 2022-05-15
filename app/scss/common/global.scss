@@ -15,6 +15,10 @@ body {
   background-color: $white;
 }
 
+body.hidden {
+  overflow: hidden;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -43,7 +47,6 @@ body {
 .menu__logo {
   flex: 0 0 200px;
   display: inline-block;
-  position: relative;
 }
 
 .logo-mobile {
@@ -79,4 +82,8 @@ body {
   color: $dark-900;
   text-transform: uppercase;
   text-align: center;
+
+  @include media-3 {
+    font-size: 24px;
+  }
 }

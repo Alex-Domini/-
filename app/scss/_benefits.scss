@@ -2,19 +2,44 @@
   padding: 48px 0 29px;
   background-color: $silver-100;
 
+  @include media-2 {
+    padding: 30px 0;
+  }
+
   &__items {
     display: flex;
     justify-content: center;
+
+    @include media-3 {
+      justify-content: space-between;
+    }
+
+    @include media-4 {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
+    position: relative;
     max-width: 264px;
     width: 100%;
-    position: relative;
     padding-left: 75px;
+
+    @include media-4 {
+      max-width: 340px;
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
 
     &:not(:last-child) {
       margin-right: 65px;
+
+      @include media-2 {
+        margin-right: 35px;
+      }
     }
 
     &::before {

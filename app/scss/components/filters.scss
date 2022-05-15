@@ -19,6 +19,10 @@
     transition: color 0.3s;
     color: $dark-500;
 
+    @include media-3 {
+      font-size: 14px;
+    }
+
     &:focus {
       box-shadow: 0 0 0 3px $green-200;
       border-radius: 3px;

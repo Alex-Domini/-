@@ -87,11 +87,22 @@
     display: flex;
     max-width: 576px;
     width: 100%;
-    margin-right: 44px;
+    margin-right: 32px;
     outline: transparent;
+    transition: top 0.3s;
 
     @include media-2 {
-      display: none;
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: -100px;
+      border-radius: 0;
+      z-index: 1;
+      margin: 0 auto;
+
+      &--active {
+        top: 112px;
+      }
     }
 
     &::before {
@@ -119,6 +130,10 @@
     font-weight: 400;
     letter-spacing: 0.03em;
 
+    @include media-2 {
+      border-radius: 0;
+    }
+
     &::placeholder {
       max-width: 100%;
       width: 100%;
@@ -139,6 +154,11 @@
     letter-spacing: 0.03em;
     outline: transparent;
     transition: background-color 0.3s;
+
+    @include media-2 {
+      padding: 15px 25px;
+      border-radius: 0;
+    }
 
     &:focus {
       box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
@@ -280,7 +300,9 @@
   color: $dark-800;
   background-color: $white;
   padding: 26px 0 24px;
-  z-index: 1;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 2;
 
   @include media-2 {
     display: block;
